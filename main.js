@@ -36,3 +36,28 @@ const team4 = [
 team4.forEach((memberObj) => {
   console.log(memberObj.name);
 })
+
+
+// Filter method #1
+const filterColor = (array, color) => {
+  return array.filter(memberObj => memberObj.color === color);
+}
+console.log(filterColor(team4, "purple"));
+
+// Filter method #2
+// console.log(team4.filter(memberObj => memberObj.color === "purple"));
+
+//Filter method #3
+const filterNameAndEmail = (array, name, email) => {
+  return array.filter(memberObj => memberObj.name === name && memberObj.email === email);
+}
+console.log(filterNameAndEmail(team4, "Dario", "darioperez1415@gmail.com"));
+
+// Find method. Exits loop after the first element match
+const findId = (array, id) => {
+  return array.find(memberObj => memberObj.id === id);
+}
+console.log(findId(team4, 1));
+
+const divEl = document.querySelector("#main");
+divEl.innerHTML = "hello world";
